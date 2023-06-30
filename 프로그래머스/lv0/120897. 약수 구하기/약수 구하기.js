@@ -1,10 +1,8 @@
 function solution(n) {
-    var answer = [];
-    let a = 0;
+    var answer = [];;
     for (let i = 0; i <= n; i++) {
         if (n % i === 0) {
-            answer[a] = i;
-            a++;
+            answer.push(i);
         }
     }
     return answer;
