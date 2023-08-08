@@ -1,15 +1,9 @@
 function solution(num) {
-    if (num === 1) {
-        return 0;
-    } else {
-        let cnt = 0;
-        
-        while (num !== 1) {
-            if (cnt === 500)    return -1;
-            if (num % 2 === 0)  num /= 2;
-            else     num = num * 3 + 1;
-            cnt++;
-        }
-        return cnt;
+    var ans = 0;
+    
+    while (num !== 1 && ans !== 500) {
+        num % 2 === 0 ? num = num / 2 : num = num * 3 + 1;
+        ans++;
     }
+    return num === 1 ? ans : -1;
 }
