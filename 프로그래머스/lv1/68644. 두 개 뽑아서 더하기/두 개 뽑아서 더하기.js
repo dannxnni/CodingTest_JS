@@ -1,15 +1,12 @@
 function solution(numbers) {
-    let sum = [];
+    const sum = [];
     
-    for (let i = 0; i < numbers.length - 1; i++) {
-        let a = numbers[i];
-        
+    for (let i = 0; i < numbers.length; i++) {
         for (let j = i + 1; j < numbers.length; j++) {
-            let b = numbers[j];
-            sum.push(a + b);
+            sum.push(numbers[i] + numbers[j]);
         }
     }
-    let ans = Array.from(new Set(sum));
+    const ans = [...new Set(sum)];
     
     return ans.sort((a, b) => a - b);
 }
