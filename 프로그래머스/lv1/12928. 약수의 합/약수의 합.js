@@ -1,9 +1,8 @@
 function solution(n) {
-    let cnt = 0;
+    let sum = 0;
     
     for (let i = 1; i <= n; i++) {
-        if (n % i === 0)    cnt += i;
-        else    continue;
+        if (n % i === 0)    sum += i;
     }
-    return cnt;
+    return sum;
 }
