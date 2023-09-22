@@ -1,7 +1,3 @@
 function solution(numbers) {
-    let sum = 0;
-    numbers.forEach(n => {
-        sum += n;
-    });
-    return sum / numbers.length;
+    return numbers.reduce((a, b) => a + b, 0) / numbers.length;
 }
