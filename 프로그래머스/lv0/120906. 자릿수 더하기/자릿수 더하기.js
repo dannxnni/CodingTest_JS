@@ -1,3 +1,9 @@
 function solution(n) {
-    return String(n).split('').reduce((acc, cur) => acc + parseInt(cur), 0)
+    let ans = n.toString();
+    let sum = 0;
+    
+    for (i of ans) {
+        sum += Number(i);
+    }
+    return sum;
 }
