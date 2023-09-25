@@ -1,4 +1,8 @@
 function solution(my_string, letter) {
-    const answer = my_string.split(letter).join('');
-    return answer;
+    let ans = "";
+    let str = my_string.split("");
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== letter)  ans += str[i];
+    }
+    return ans;
 }
