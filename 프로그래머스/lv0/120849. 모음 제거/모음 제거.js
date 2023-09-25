@@ -1,5 +1,11 @@
 function solution(my_string) {
-    let v = 'aeiou';
+    let ans = "";
+    let v = ["a", "e", "i", "o", "u"];
     
-    return my_string.split("").filter(e => !v.includes(e)).join("");
+    for (let i = 0; i < my_string.length; i++) {
+        if (!v.includes(my_string[i])) {
+            ans += my_string[i];
+        }
+    }
+    return ans;
 }
