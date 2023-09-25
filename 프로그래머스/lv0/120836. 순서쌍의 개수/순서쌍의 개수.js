@@ -1,8 +1,8 @@
 function solution(n) {
-    const answer = [];
+    let cnt = 0;
     
     for (let i = 1; i <= n; i++) {
-        if (n % i === 0)    answer.push(i);
+        if (n % i === 0)    cnt++;
     }
-    return answer.length;
+    return cnt;
 }
