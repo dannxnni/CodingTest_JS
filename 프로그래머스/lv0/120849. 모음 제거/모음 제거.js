@@ -1,4 +1,5 @@
 function solution(my_string) {
-    return my_string.replace(/[aeiou]/g, '');
+    let v = 'aeiou';
+    
+    return my_string.split("").filter(e => !v.includes(e)).join("");
 }
-// 정규 표현식 사용
