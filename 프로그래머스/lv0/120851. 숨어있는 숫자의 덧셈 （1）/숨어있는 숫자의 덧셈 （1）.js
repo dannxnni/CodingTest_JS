@@ -1,5 +1,9 @@
 function solution(my_string) {
-    var answer = 0;
-    my_string.split('').map(e => !isNaN(e) ? answer += Number(e) : 0)
-    return answer;
+    let sum = 0;
+    let str = my_string.split("");
+    
+    for (let i = 0; i < str.length; i++) {
+        if (Number(str[i])) sum += Number(str[i]);
+    }
+    return sum;
 }
