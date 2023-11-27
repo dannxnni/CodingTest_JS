@@ -1,5 +1,10 @@
 function solution(a, d, included) {
-    return included.reduce((acc, flag, i) => {
-        return flag ? acc + a + d * i : acc;
-    }, 0)
+    let ans = 0;
+    
+    for (let i = 0; i < included.length; i++) {
+        if (included[i]) {
+            ans += a + d * i;
+        }
+    }
+    return ans;
 }
