@@ -1,12 +1,9 @@
 function solution(s) {
-    let arrS = s.split(" ");
-    let ans = 0;
+    let stack = [];
     
-    for (let i = 0; i < arrS.length; i++) {
-        if (arrS[i] === "Z") {
-            arrS[i - 1] = 0;
-            arrS[i] = 0
-        }
-    }
-    return arrS.reduce((acc, cur) => acc + Number(cur), 0);
+    s.split(" ").forEach(val => {
+        if (val === "Z")    stack.pop();
+        else    stack.push(Number(val));
+    })
+    return stack.length ? stack.reduce((acc, cur) => acc + cur) : 0;
 }
